@@ -17,13 +17,13 @@ let userAmount = 10;
 //Function that generates and populates these keys with values.
 function generateUserProfile() {
     return {
-    'id': randomUserId,
-    'name': randomName,
-    'gender': randomGender,
-    'email': randomEmail,
-    'dob': randomBirthDate,
-    'phone': randomPhone,
-    'job': randomJob,
+    'id': faker.string.uuid(),
+    'name': faker.person.fullName(),
+    'gender': faker.person.gender(),
+    'email': faker.internet.email(),
+    'dob': faker.date.birthdate(),
+    'phone': faker.phone.imei(),
+    'job': faker.person.jobTitle(),
     };
 };
 
